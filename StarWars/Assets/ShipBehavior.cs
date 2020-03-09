@@ -8,13 +8,16 @@ public class ShipBehavior : MonoBehaviour
     private Rigidbody2D rbd;
     public float velocity;
     private float width;
+    private float height;
+
     void Start()
     {
         rbd = GetComponent<Rigidbody2D>();
         velocity = 10;
-        width = 11.6f;
+        height = Camera.main.orthographicSize;
+        width = height * Camera.main.aspect;
 
-      
+
     }
 
     // Update is called once per frame
