@@ -33,6 +33,11 @@ public class ShipBehavior : MonoBehaviour
         else if (transform.position.x < -width)
             transform.position = new Vector2(width, transform.position.y);
 
+        if (transform.position.y > 0)
+            transform.position = new Vector2(transform.position.x, 0);
+
+        if (transform.position.y < -height)
+            transform.position = new Vector2(transform.position.x, -height);
 
     }
 }
